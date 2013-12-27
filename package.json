@@ -4,8 +4,17 @@
   "description": "No more Err in tasks.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Ashish <ash.ssj@gmail.com>",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshishCode/TaskErr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AshishCode/TaskErr/issues"
+  },
+  "homepage": "https://github.com/AshishCode/TaskErr"
 }
