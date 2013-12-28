@@ -1,0 +1,40 @@
+<!-- route1.list.html -->
+
+  		
+  		<!-- <ul class="dropdown-menu">
+    		<a href="" ng-repeat="tag in arrayOfTags"><li>{{tag}}</li></a>
+  		</ul> -->
+	
+		<!-- <a href="" ng-repeat="ppl in arrayOfMembers"><li>{{ppl}}</li></a> -->
+	
+
+
+<!-- individual task -->
+<div id="TaskRow{{task.TID}}" ng-repeat="task in JsonData | orderBy:sortOrder | filter:{PID:routePID}" class="row IndividualTaskRow">
+	
+	<div class="IndividualTaskRowTID">
+		{{task.TID}}--{{sortOrder}}
+	</div>
+
+	<div class="IndividualTaskRowCheckBox">
+		<input type="checkbox" ng-model="task.completed">
+
+	</div>
+
+	<div class="IndividualTaskRowInput">
+		<span style="float:left;" ng-hide="task.editingTaskName" ng-click="startEditing(task,'taskName')">{{task.TN}}</span>
+		<!-- 13 is keyCode for return key -->
+		<form ng-submit="doneEditing(task,'taskName')" ng-show="task.editingTaskName">
+			<input ng-blur="doneEditing(task,'taskName')" ng-focus="task==editedTaskName" ng-model="task.TN" class="input-large">
+		</form>
+		<a style="float:right;" href="#/{{routePID}}/task/{{task.TID}}"><button class="btn btn-info">Details</button></a>
+	</div>
+
+</div>
+
+
+
+
+
+
+
